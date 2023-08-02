@@ -40,16 +40,12 @@ Start building your Discord bot with these powerful features using the Discord B
         - **ADMIN_USER_ID**
         - **HOST (Optional)**
         - **PORT (Optional)**
-4. Configuring variables in `.env`  
-    - Get your `BOT_TOKEN` by creating an application on [Discord Developer Portal](https://discord.com/developers/applications). Navigate to "OAuth2" => "General" on your application page to get the `CLIENT_ID`.  
-    - Set up a MongoDB database with "chats", "guilds", and "logs" collections, and paste the connection URI into `MONGO_URI`.  
-    - Obtain your `OPEN_AI_KEY` on the account section of [OpenAI API Platform](https://platform.openai.com/account/api-keys).  
-    - The `ADMIN_USER_ID` should be the Discord user ID of the person who will handle error reports. Link their profile to the "Report error to admin" button in the bot.  
-    ![image](https://github.com/OnCloud125252/Discordbot-Template/assets/75195127/bb20be48-5000-4383-a465-0164915c0052)
+4. Run the bot
+    You can use the following command to test the bot locally:
+    ```bash
+    npm run test
+    ```
+    The terminal will output something like this if there aren't any error:  
+    ![image](https://github.com/OnCloud125252/Discord-Bot-Template/assets/75195127/0745c434-97a4-4222-beda-22f654f9ec7d)
 
-## Invite your bot
-You can create an invite link for your bot by following these steps:  
-1. Go to "OAuth2" => "URL Generator" on your [Discord Developer Portal](https://discord.com/developers/applications) application page.
-2. Select "bot" for scopes and "Administrator" for bot permissions.
-3. A link will be generated, it will look something like this: `https://discord.com/api/oauth2/authorize?client_id=0000000000000000000&permissions=8&scope=bot`.
-4. Click on the link to invite your bot into your servers!
+## For more details, please visit the [Wiki Page](https://github.com/OnCloud125252/Discord-Bot-Template/wiki/)
