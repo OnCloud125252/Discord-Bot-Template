@@ -1,6 +1,6 @@
 {
     "type": "module",
-    "name": "discordbot-template",
+    "name": "discord-bot-template",
     "version": "1.0.0",
     "description": "",
     "main": "bot.js",
