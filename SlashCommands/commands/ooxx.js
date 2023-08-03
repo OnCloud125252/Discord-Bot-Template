@@ -8,7 +8,7 @@ export default {
         .addUserOption((option) =>
             option.setName("player").setDescription("Invite someone to play").setRequired(true),
         ),
-    async execute(client, interaction) {
+    async execute({ interaction }) {
         const user1 = interaction.user;
         const user2 = interaction.options.getUser("player");
         let gameBoard = new Array(9);

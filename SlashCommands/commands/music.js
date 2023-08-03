@@ -53,7 +53,7 @@ export default {
         // )
         .setDescription("Use a music player"),
 
-    async execute(client, interaction) {
+    async execute({ interaction }) {
         switch (interaction.options.getSubcommand()) {
             case "play": {
                 const music = interaction.options.getString("music");

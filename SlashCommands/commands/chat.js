@@ -25,7 +25,7 @@ export default {
         )
         .setDefaultMemberPermissions(PermissionFlagsBits.SendMessagesInThreads)
         .setDMPermission(false),
-    async execute(client, interaction) {
+    async execute({ client, interaction }) {
         let guildObj;
 
         try {

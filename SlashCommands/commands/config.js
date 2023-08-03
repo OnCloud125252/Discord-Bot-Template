@@ -23,7 +23,7 @@ export default {
         )
         .setDMPermission(false)
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
-    async execute(client, interaction) {
+    async execute({ interaction }) {
         switch (interaction.options.getSubcommand()) {
             case "chat": {
                 const channelObj = interaction.options.getChannel("channel");

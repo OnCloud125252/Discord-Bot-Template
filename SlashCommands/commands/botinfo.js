@@ -7,7 +7,7 @@ export default {
     data: new SlashCommandBuilder()
         .setName("botinfo")
         .setDescription("Show bot details"),
-    async execute(client, interaction, version) {
+    async execute({ client, interaction, version }) {
         const messageCreateTime = new Date().getTime();
 
         var content = "";

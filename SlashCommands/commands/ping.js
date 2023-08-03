@@ -5,7 +5,7 @@ export default {
     data: new SlashCommandBuilder()
         .setName("ping")
         .setDescription("Replies with Pong and calculate latency"),
-    async execute(client, interaction, version) {
+    async execute({ client, interaction, version }) {
         const messageCreateTime = new Date().getTime();
 
         await interaction.reply({

@@ -29,7 +29,7 @@ export default {
                 .setRequired(false)
         )
         .setDescription("Lists all available slash commands"),
-    async execute(client, interaction, version) {
+    async execute({ interaction, version }) {
         const selectedCommand = interaction.options.getString("command") ?? false;
         const responseMessageVisibility = !(interaction.options.getBoolean("visible") ?? false);
 

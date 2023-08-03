@@ -33,7 +33,7 @@ export default async function InteractionCreateHandler(client, interaction) {
             return;
         }
 
-        await command.execute(client, interaction, packageJSON.version);
+        await command.execute({ client, interaction, version: packageJSON.version });
     } catch (error) {
         console.error(error);
         await logErrorToDB(errorUUID, {
