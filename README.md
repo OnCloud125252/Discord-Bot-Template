@@ -43,7 +43,7 @@ Start building your Discord bot with these powerful features using the Discord B
 4. Run the bot
     You can use the following command to test the bot locally:
     ```bash
-    npm run test
+    npm start
     ```
     The terminal will output something like this if there aren't any error:  
     ![image](https://github.com/OnCloud125252/Discord-Bot-Template/assets/75195127/0745c434-97a4-4222-beda-22f654f9ec7d)

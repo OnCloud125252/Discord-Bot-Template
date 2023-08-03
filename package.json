@@ -6,7 +6,7 @@
     "main": "bot.js",
     "scripts": {
         "production": "pm2 start bot.js",
-        "test": "node bot.js",
+        "start": "node bot.js",
         "lint": " npx eslint ./",
         "lintfix": " npx eslint ./ --fix"
     },
