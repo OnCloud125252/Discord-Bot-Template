@@ -14,6 +14,12 @@ Building commands for this bot is developer-friendly, as you only need to create
 
 Start building your Discord bot with these powerful features using the Discord Bot Template!
 
+# Deploy to [Zeabur](https://zeabur.com/)
+You can quickly deploy your Discord bot on [Zeabur](https://zeabur.com/) using the following badge. Click on it to deploy!  
+
+[![Deploy to Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/SKHTZA?referralCode=OnCloud125252)
+
+# Manually install
 ## Requirements
 - **Node.js** (version 16 or higher)
 - **pnpm**  
