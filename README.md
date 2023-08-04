@@ -19,12 +19,22 @@ You can quickly deploy your Discord bot on [Zeabur](https://zeabur.com/) using t
 
 [![Deploy to Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/SKHTZA?referralCode=OnCloud125252)
 
+If you choose to deploy your bot on Zeabur, you will get the basic features included in this template.  
+> **Please note that if you want to customize the bot, add your own commands, or explore advanced features, it is recommended to follow the "Manually Install" section. This will give you full control over the bot and allow you to tailor it according to your specific needs.**
+
+**Features included in this template:**
+- **ChatGPT**: This bot comes with a ChatGPT feature that can read chat history and remember users' Discord names, enhancing the interaction experience.
+- **Music Player**: Enjoy music playback with the built-in music player, providing entertainment to users in your Discord server.
+- **Tic Tac Toe**: A fun and classic game of Tic Tac Toe is included, adding a playful element to your bot.
+- **Auto-generated Help Command**: Help users navigate your bot's commands effortlessly with the auto-generated help command.
+- **Error Logging**: Keep track of any unexpected errors efficiently with the integrated error logging feature.
+
 # Manually install
 ## Requirements
 - **Node.js** (version 16 or higher)
 - **pnpm**  
-    Note: pnpm is the recommended package manager, but npm can still be used.  
-    You can install pnpm using `npm install -g pnpm`. For more installation option please visit [pnpm document](https://pnpm.io/installation).
+    > **pnpm is the recommended package manager, but npm can still be used.**  
+    > **You can install pnpm using `npm install -g pnpm`. For more installation option please visit [pnpm document](https://pnpm.io/installation).**
 
 ## Installation
 1. Clone this repository
