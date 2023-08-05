@@ -24,7 +24,7 @@ You can quickly deploy your Discord bot on [Zeabur](https://zeabur.com/) using t
 If you choose to deploy your bot on Zeabur, you will get the basic features included in this template.  
 
 > [!NOTE]\
-> Please note that if you want to customize the bot, add your own commands, or explore advanced features, it is recommended to follow the *"Manually Install"* section. This will give you full control over the bot and allow you to tailor it according to your specific needs.
+> If you want to customize the bot, add your own commands, or explore advanced features, it is recommended to follow the *"Manually Install"* section. This will give you full control over the bot and allow you to tailor it according to your specific needs.
 
 # Manually install
 To manually install the Discord Bot Template, follow these steps:
