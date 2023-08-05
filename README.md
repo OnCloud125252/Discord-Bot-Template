@@ -22,8 +22,7 @@ You can quickly deploy your Discord bot on [Zeabur](https://zeabur.com/) using t
 [![Deploy to Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/SKHTZA?referralCode=OnCloud125252)
 
 If you choose to deploy your bot on Zeabur, you will get the basic features included in this template.  
-
-> [!NOTE]\
+> [!IMPORTANT]\
 > If you want to customize the bot, add your own commands, or explore advanced features, it is recommended to follow the *"Manually Install"* section. This will give you full control over the bot and allow you to tailor it according to your specific needs.
 
 # Manually install
