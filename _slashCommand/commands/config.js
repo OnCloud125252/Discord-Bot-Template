@@ -35,7 +35,8 @@ export default {
                         }
                     ]);
                     await interaction.reply(`Successfully register <#${channelObj.id}> for ChatBot in this server.`);
-                } catch (error) {
+                }
+                catch (error) {
                     await interaction.reply("Can't config chat channel, please try again later.");
                 }
                 break;

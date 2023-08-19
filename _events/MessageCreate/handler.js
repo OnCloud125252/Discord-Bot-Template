@@ -11,7 +11,8 @@ export default async function MessageCreateHandler(message) {
 
     try {
         guildObj = await readGuild(message.guild.id);
-    } catch (error) {
+    }
+    catch (error) {
         return;
     }
 

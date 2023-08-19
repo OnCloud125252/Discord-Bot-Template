@@ -18,7 +18,9 @@ export default async function InteractionCreateHandler(client, interaction) {
             command: {
                 name: interaction.commandName,
                 subcommand: interaction.options._subcommand,
-                options: interaction.options._hoistedOptions.map(option => { return { name: option.name, value: option.value }; })
+                options: interaction.options._hoistedOptions.map(option => {
+                    return { name: option.name, value: option.value }; 
+                })
             }
         });
     });
@@ -34,7 +36,8 @@ export default async function InteractionCreateHandler(client, interaction) {
         }
 
         await command.execute({ client, interaction, version: packageJSON.version });
-    } catch (error) {
+    }
+    catch (error) {
         console.error(error);
         await logErrorToDB(errorUUID, {
             interaction,
@@ -42,7 +45,9 @@ export default async function InteractionCreateHandler(client, interaction) {
             command: {
                 name: interaction.commandName,
                 subcommand: interaction.options._subcommand,
-                options: interaction.options._hoistedOptions.map(option => { return { name: option.name, value: option.value }; })
+                options: interaction.options._hoistedOptions.map(option => {
+                    return { name: option.name, value: option.value }; 
+                })
             }
         });
 

@@ -85,12 +85,14 @@ export default {
                                 reply = getResult(phase, gameBoard, user);
                             }
                             collected.update(reply);
-                        } else if (collected.user.id == user[(count + 1) % 2].id) {
+                        }
+                        else if (collected.user.id == user[(count + 1) % 2].id) {
                             const embed = new EmbedBuilder()
                                 .setTitle("Warning")
                                 .setDescription("You need to wait for the other side to finish their move");
                             collected.reply({ embeds: [embed], ephemeral: true });
-                        } else {
+                        }
+                        else {
                             const embed = new EmbedBuilder()
                                 .setTitle("Warning")
                                 .setDescription("It's not your turn");
@@ -102,7 +104,8 @@ export default {
 
                 if (phase > 1 && phase < 5) {
                     collector.stop();
-                } else if (phase != 1) {
+                }
+                else if (phase != 1) {
                     collector.stop();
                 }
             }
@@ -117,7 +120,8 @@ function getResult(phase, gameBoard, user) {
     let embed;
     if (phase == 4) {
         embed = new EmbedBuilder().setTitle("Game over").setDescription("Tie");
-    } else {
+    }
+    else {
         embed = new EmbedBuilder()
             .setTitle("Game over")
             .setDescription(`Winner: <@${user[(phase - 1) % 2].id}>`);
@@ -136,13 +140,15 @@ function getResult(phase, gameBoard, user) {
                     .setStyle(ButtonStyle.Primary)
                     .setCustomId(`${number}`)
                     .setDisabled(true);
-            } else if (gameBoard[number] == 1) {
+            }
+            else if (gameBoard[number] == 1) {
                 button = new ButtonBuilder()
                     .setEmoji("❌")
                     .setStyle(ButtonStyle.Primary)
                     .setCustomId(`${number}`)
                     .setDisabled(true);
-            } else {
+            }
+            else {
                 button = new ButtonBuilder()
                     .setEmoji("❓")
                     .setStyle(ButtonStyle.Secondary)
@@ -163,43 +169,50 @@ function checkGame(gameBoard) {
 
     if (gameBoard[0] == gameBoard[1] && gameBoard[1] == gameBoard[2] && gameBoard[0] != undefined) {
         phase = 2 + gameBoard[0];
-    } else if (
+    }
+    else if (
         gameBoard[3] == gameBoard[4] &&
         gameBoard[4] == gameBoard[5] &&
         gameBoard[3] != undefined
     ) {
         phase = 2 + gameBoard[3];
-    } else if (
+    }
+    else if (
         gameBoard[6] == gameBoard[7] &&
         gameBoard[7] == gameBoard[8] &&
         gameBoard[6] != undefined
     ) {
         phase = 2 + gameBoard[6];
-    } else if (
+    }
+    else if (
         gameBoard[0] == gameBoard[4] &&
         gameBoard[4] == gameBoard[8] &&
         gameBoard[4] != undefined
     ) {
         phase = 2 + gameBoard[4];
-    } else if (
+    }
+    else if (
         gameBoard[0] == gameBoard[3] &&
         gameBoard[3] == gameBoard[6] &&
         gameBoard[3] != undefined
     ) {
         phase = 2 + gameBoard[3];
-    } else if (
+    }
+    else if (
         gameBoard[1] == gameBoard[4] &&
         gameBoard[4] == gameBoard[7] &&
         gameBoard[1] != undefined
     ) {
         phase = 2 + gameBoard[4];
-    } else if (
+    }
+    else if (
         gameBoard[2] == gameBoard[5] &&
         gameBoard[5] == gameBoard[8] &&
         gameBoard[2] != undefined
     ) {
         phase = 2 + gameBoard[2];
-    } else if (
+    }
+    else if (
         gameBoard[2] == gameBoard[4] &&
         gameBoard[4] == gameBoard[6] &&
         gameBoard[4] != undefined
@@ -239,13 +252,15 @@ function runGame(buttonId, round, gameBoard, user) {
                     .setStyle(ButtonStyle.Primary)
                     .setCustomId(`${number}`)
                     .setDisabled(true);
-            } else if (gameBoard[number] == 1) {
+            }
+            else if (gameBoard[number] == 1) {
                 button = new ButtonBuilder()
                     .setEmoji("❌")
                     .setStyle(ButtonStyle.Primary)
                     .setCustomId(`${number}`)
                     .setDisabled(true);
-            } else {
+            }
+            else {
                 button = new ButtonBuilder()
                     .setEmoji("❓")
                     .setStyle(ButtonStyle.Secondary)

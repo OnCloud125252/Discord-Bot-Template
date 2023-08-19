@@ -17,7 +17,8 @@ export default async function unRegisterSlashCommands() {
             }
         );
         console.log("unRegisterSlashCommands : successfully deleted all global slash commands");
-    } catch (error) {
+    }
+    catch (error) {
         console.error(error);
     }
 }

@@ -67,7 +67,8 @@ export default {
                     try {
                         const musicID = await searchMusic(music);
                         player.play(interaction, `https://www.youtube.com/watch?v=${musicID}`, voiceChannel.id);
-                    } catch (error) {
+                    }
+                    catch (error) {
                         console.log(error);
                         interaction.reply("Music not found");
                     }

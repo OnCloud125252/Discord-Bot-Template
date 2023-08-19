@@ -52,7 +52,8 @@ export default class MusicPlayer {
                     });
                 });
 
-            } else {
+            }
+            else {
                 const res = await play.video_basic_info(musicURL);
                 musicName = res.video_details.title;
 
@@ -79,12 +80,14 @@ export default class MusicPlayer {
                         timestamp: new Date()
                     }]
                 });
-            } else {
+            }
+            else {
                 this.isPlaying[guildID] = true;
                 this.playMusic(interaction, this.queue[guildID][0], false);
             }
 
-        } catch (e) {
+        }
+        catch (e) {
             console.log(e);
             interaction.reply({
                 embeds: [{
@@ -173,7 +176,8 @@ export default class MusicPlayer {
                     this.playNextMusic(interaction);
                 }
             });
-        } catch (e) {
+        }
+        catch (e) {
             console.log(e);
             interaction.channel.send({
                 embeds: [{
@@ -215,7 +219,8 @@ export default class MusicPlayer {
                     timestamp: new Date()
                 }]
             });
-        } else {
+        }
+        else {
             interaction.reply({
                 embeds: [{
                     author: {
@@ -277,7 +282,8 @@ export default class MusicPlayer {
         if (this.dispatcher[guildID]) {
             this.dispatcher[guildID].stop();
             interaction.reply({ content: "跳過目前歌曲" });
-        } else {
+        }
+        else {
             interaction.reply({ content: "機器人目前未加入頻道" });
         }
     }
@@ -293,12 +299,14 @@ export default class MusicPlayer {
             if (queue.length > 10) {
                 queue = queue.slice(0, 10);
                 queueString = `目前歌單：\n${queue.join("\n")}\n……與其他 ${this.queue[guildID].length - 10} 首歌`;
-            } else {
+            }
+            else {
                 queueString = `目前歌單：\n${queue.join("\n")}`;
             }
 
             interaction.reply({ content: queueString });
-        } else {
+        }
+        else {
             interaction.reply({
                 embeds: [{
                     author: {
@@ -350,7 +358,8 @@ export default class MusicPlayer {
             this.connection[guildID].disconnect();
 
             interaction.reply({ content: "離開頻道" });
-        } else {
+        }
+        else {
             interaction.reply({ content: "機器人未加入任何頻道" });
         }
     }

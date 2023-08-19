@@ -38,7 +38,8 @@ function bar(line, progressLine, slider, _this) {
             bar,
             percentage
         };
-    } else {
+    }
+    else {
         const percentage = _this.current / _this.total;
         const progress = Math.round((_this.size * percentage));
         const emptyProgress = _this.size - progress;

@@ -24,6 +24,10 @@
         "quotes": [
             "error",
             "double"
+        ],
+        "brace-style": [
+            "error",
+            "stroustrup"
         ]
     }
 }

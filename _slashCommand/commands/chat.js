@@ -34,7 +34,8 @@ export default {
                 await await interaction.reply("Please config the chat channel first using `/config` command.");
                 return;
             }
-        } catch (error) {
+        }
+        catch (error) {
             await await interaction.reply("Please config the chat channel first using `/config` command.");
             return;
         }
@@ -96,7 +97,8 @@ export default {
                     await client.channels.cache.get(newChatID).send(aiReply.content);
 
                     await interaction.editReply(`Successfully created new chat at <#${newChatID}>.`);
-                } catch (error) {
+                }
+                catch (error) {
                     console.error(error);
                     client.channels.cache.get(newChatID).delete();
                     await interaction.reply("Can't create new chat, please try again later.");

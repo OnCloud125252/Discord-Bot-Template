@@ -39,7 +39,8 @@ export default async function chat(message) {
         await updateChat(chatID, title, [messageObj, gptReply]);
 
         await previousMessage.edit(gptReply.content);
-    } catch (error) {
+    }
+    catch (error) {
         console.error(error);
         await previousMessage.edit("Can't connect to ChatGPT, please try again later.");
     }
