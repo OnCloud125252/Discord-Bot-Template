@@ -1,14 +1,14 @@
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle } from "discord.js";
 import { readFileSync } from "fs";
 
-import uuid from "../../_modules/uuid/index.js";
+import UUID from "../../_modules/UUID/index.js";
 import logErrorToDB from "../../_modules/MongoDB/functions/log/write.js";
 
 
 const packageJSON = JSON.parse(readFileSync("./package.json"));
 
 export default async function InteractionCreateHandler(client, interaction) {
-    const errorUUID = uuid();
+    const errorUUID = UUID();
 
     process.on("uncaughtException", async (error) => {
         console.error(error);

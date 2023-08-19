@@ -1,6 +1,6 @@
 import { SlashCommandBuilder } from "discord.js";
 
-import readableTime from "../../_modules/readableTime/index.js";
+import ReadableTime from "../../_modules/ReadableTime/index.js";
 
 
 export default {
@@ -78,7 +78,7 @@ export default {
                     },
                     {
                         name: "Uptime",
-                        value: `\`${readableTime(client.uptime)["string"]}\``,
+                        value: `\`${ReadableTime(client.uptime)["string"]}\``,
                         inline: true
                     },
                     {

@@ -1,4 +1,4 @@
-export default function readableTime(milliseconds) {
+export default function ReadableTime(milliseconds) {
     let year,
         month,
         day,

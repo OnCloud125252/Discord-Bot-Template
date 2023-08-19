@@ -6,12 +6,12 @@ import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import * as dotenv from "dotenv";
 
-import registerSlashCommands from "./SlashCommands/register.js";
-import readableTime from "./_modules/readableTime/index.js";
-import InteractionCreateHandler from "./events/InteractionCreate/handler.js";
-import MessageCreateHandler from "./events/MessageCreate/handler.js";
-import ThreadDeleteHandler from "./events/ThreadDelete/handler.js";
-import unRegisterSlashCommands from "./SlashCommands/unRegister.js";
+import registerSlashCommands from "./_slashCommand/register.js";
+import unRegisterSlashCommands from "./_slashCommand/unRegister.js";
+import ReadableTime from "./_modules/ReadableTime/index.js";
+import InteractionCreateHandler from "./_events/InteractionCreate/handler.js";
+import MessageCreateHandler from "./_events/MessageCreate/handler.js";
+import ThreadDeleteHandler from "./_events/ThreadDelete/handler.js";
 import CheckMissingENV from "./_modules/CheckMissingENV/index.js";
 
 const startTime = performance.now();
@@ -47,7 +47,7 @@ export const client = new Client({
 });
 
 client.commands = new Collection();
-const commandsPath = join(__dirname, "/SlashCommands", "/commands");
+const commandsPath = join(__dirname, "_slashCommand", "commands");
 const commandFiles = readdirSync(commandsPath).filter(file => file.endsWith(".js"));
 
 for (const file of commandFiles) {
@@ -76,10 +76,10 @@ client.on("ready", async () => {
         const finishTime = performance.now();
         console.error(`Keepalive : listening on ${host}:${app.address().port}`);
         console.log(`Bot : logged in as ${client.user.tag}`);
-        console.log(`Server : client is on (took ${readableTime(Math.round(finishTime - startTime))["string"]})`);
+        console.log(`Server : client is on (took ${ReadableTime(Math.round(finishTime - startTime))["string"]})`);
     });
     server.get("/", (_, res) => {
-        res.status(200).json(`Service is up : ${readableTime(Math.round(performance.now()))["string"]}`);
+        res.status(200).json(`Service is up : ${ReadableTime(Math.round(performance.now()))["string"]}`);
     });
 
     (function loop() {
